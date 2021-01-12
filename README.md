@@ -220,13 +220,42 @@ Usage of client.exe:
 
 由于我的服务端最终是要部署到路由器上使用的，路由器型号网件R6900，路由器固件梅林380.70_0-X7.9.1，所以要编译为arm架构程序
 
-```go
+```bash
 CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=5 go build server.go
 ```
 
 至于客户端，当然是本地运行了，直接go build
 
-```go
+```bash
 go build client.go
 ```
 
+## 运行示例
+
+服务端：
+
+```bash
+# windows 使用默认参数启动直接双击
+server.exe
+# windows 使用自定义参数启动
+server.exe -p 43088 -key 1234567890abcdef
+
+
+# linux 使用默认参数启动
+chmod +x server
+./server
+# linux 使用自定义参数启动
+chmod +x server
+./server -p 8080 -key 1234567890abcdef
+```
+
+客户端：
+
+```bash
+# 指定服务端地址、ASE加密密钥、需要服务端请求的真实url
+client.exe -server http://localhost:43088 -key 1234567890abcdef -url https://www.baidu.com
+```
+
+## 项目地址
+
+[https://github.com/wangrui027/go-safe-proxy](https://github.com/wangrui027/go-safe-proxy)
