@@ -224,7 +224,7 @@ Usage of client.exe:
 CGO_ENABLED=0 GOOS=linux GOARCH=arm GOARM=5 go build server.go
 ```
 
-至于客户端，当然是本地运行了，编译为x86结构就OK了
+至于客户端，当然是本地运行了，直接go build
 
 ```go
 go build client.go
