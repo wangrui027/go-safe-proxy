@@ -246,7 +246,7 @@ chmod +x server
 ./server
 # linux 使用自定义参数启动
 chmod +x server
-./server -p 8080 -key 1234567890abcdef
+./server -p 43088 -key 1234567890abcdef
 ```
 
 客户端：
