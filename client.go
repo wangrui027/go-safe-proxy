@@ -62,7 +62,7 @@ func main() {
 
 	flag.StringVar(&server, "server", "", "服务端地址")
 	flag.StringVar(&keyText, "key", "1234567890abcdef", "AES密钥")
-	flag.StringVar(&url, "url", "", "请求访问地址，使用当前的AES密钥加密后并做Base64编码")
+	flag.StringVar(&url, "url", "", "需要服务端代理请求的访问地址，客户端后台会使用当前的AES密钥加密后并做Base64编码")
 	flag.Parse()
 
 	key = []byte(keyText)
